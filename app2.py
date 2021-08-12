@@ -57,7 +57,7 @@ def get_dataset(dataset_name):
 
     else :
         
-        data = pd.read_csv("/Users/Abdoul_Aziz_Berrada/Documents/Data Science/Streamit_app/BreastCancer.csv")
+        data = pd.read_csv("/Users/Abdoul_Aziz_Berrada/Documents/Data Science/Streamit_app/BreastCancer.csvhttps://github.com/aadmberrada/Streamit_app/blob/master/BreastCancer.csv")
         data["diagnosis"] = LE.fit_transform(data["diagnosis"])
         
         data.replace([np.inf, -np.inf], np.nan, inplace=True)
