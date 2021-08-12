@@ -50,16 +50,14 @@ def get_dataset(dataset_name):
     
     if dataset_name == "Heart Attack" : 
     
-        data = pd.read_csv("/Users/Abdoul_Aziz_Berrada/Documents/Data Science/ML-Healthcare-Web-App-main/Data/heart.csv")
-    
+        data = pd.read_csv("/Users/Abdoul_Aziz_Berrada/Documents/Data Science/Streamit_app/heart.csv")
         st.header("Heart Attack Prediction")
         
         return data
 
     else :
         
-        data = pd.read_csv("/Users/Abdoul_Aziz_Berrada/Documents/Data Science/ML-Healthcare-Web-App-main/Data/BreastCancer.csv")
-        
+        data = pd.read_csv("/Users/Abdoul_Aziz_Berrada/Documents/Data Science/Streamit_app/BreastCancer.csv")
         data["diagnosis"] = LE.fit_transform(data["diagnosis"])
         
         data.replace([np.inf, -np.inf], np.nan, inplace=True)
